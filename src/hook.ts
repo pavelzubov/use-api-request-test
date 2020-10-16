@@ -45,7 +45,7 @@ export interface IAlertService {
 
 const defaultGetErrorMessageCallback = (errorMessage: string) => errorMessage;
 
-const useApiRequest = <T extends any>({
+export const useApiRequest = <T extends any>({
   alertService,
   getErrorMessageCallback = defaultGetErrorMessageCallback,
   fetchOnMountData,
@@ -112,5 +112,3 @@ const useApiRequest = <T extends any>({
     sendRequest
   };
 };
-
-export default useApiRequest;
